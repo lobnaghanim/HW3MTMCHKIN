@@ -6,8 +6,6 @@
 
 class HealthPoints {
 
-
-
 public:
     int healthPoints;
     explicit HealthPoints(int max_HP = MAXHP);
@@ -18,8 +16,6 @@ private:
 
 
 };
-
-
 
 
 #endif
