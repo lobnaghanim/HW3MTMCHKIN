@@ -9,4 +9,4 @@ add_executable(HW3MTMCHKIN
         HealthPointsExampleTest.cpp
         QueueExampleTests.cpp
         TestMain.cpp
-        TestUtils.h)
+        TestUtils.h HealthPoints.cpp main.cpp)

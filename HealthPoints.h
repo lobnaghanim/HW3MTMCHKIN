@@ -1,20 +1,23 @@
 #ifndef HEALTHPOINTS_H
 #define HEALTHPOINTS_H
-#define maxHP = 100;
-class HealthPoints{
+#define MAXHP 100
+
+
+
+class HealthPoints {
 
 
 public:
 
-    explicit HealthPoints(const int HP);
-
+    explicit HealthPoints(int max_HP = MAXHP);
+    class InvalidArgument {};
 
 private:
 
 
 
-
 };
+
 
 
 
