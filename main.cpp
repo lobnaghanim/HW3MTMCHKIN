@@ -1,6 +1,10 @@
+#include <iostream>
 
+
+using namespace std;
 #include "HealthPoints.h"
-int main(){
 
+int main(){
+    HealthPoints newHealthPoint;
 
 }

@@ -7,8 +7,9 @@
 class HealthPoints {
 
 
-public:
 
+public:
+    int healthPoints;
     explicit HealthPoints(int max_HP = MAXHP);
     class InvalidArgument {};
 
