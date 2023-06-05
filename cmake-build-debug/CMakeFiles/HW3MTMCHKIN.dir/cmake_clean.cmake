@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj"
   "CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj.d"
+  "CMakeFiles/HW3MTMCHKIN.dir/Queue.cpp.obj"
+  "CMakeFiles/HW3MTMCHKIN.dir/Queue.cpp.obj.d"
   "CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj"
   "CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj.d"
   "HW3MTMCHKIN.exe"

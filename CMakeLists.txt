@@ -5,10 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-
 add_executable(HW3MTMCHKIN
-        HealthPoints.cpp HealthPoints.h main.cpp)
-
+        HealthPoints.cpp HealthPoints.h main.cpp Queue.h Queue.cpp)
 
 #add_executable(HW3MTMCHKIN
 #        HealthPointsExampleTest.cpp

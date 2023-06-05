@@ -152,6 +152,30 @@ HealthPoints.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.s
 .PHONY : HealthPoints.cpp.s
 
+Queue.obj: Queue.cpp.obj
+.PHONY : Queue.obj
+
+# target to build an object file
+Queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/Queue.cpp.obj
+.PHONY : Queue.cpp.obj
+
+Queue.i: Queue.cpp.i
+.PHONY : Queue.i
+
+# target to preprocess a source file
+Queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/Queue.cpp.i
+.PHONY : Queue.cpp.i
+
+Queue.s: Queue.cpp.s
+.PHONY : Queue.s
+
+# target to generate assembly for a file
+Queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/Queue.cpp.s
+.PHONY : Queue.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... HealthPoints.obj
 	@echo ... HealthPoints.i
 	@echo ... HealthPoints.s
+	@echo ... Queue.obj
+	@echo ... Queue.i
+	@echo ... Queue.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

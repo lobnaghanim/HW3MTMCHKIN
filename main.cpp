@@ -1,24 +1,14 @@
 #include <iostream>
-
-
 using namespace std;
 #include "HealthPoints.h"
-
+#include "Queue.h"
 int main(){
-    HealthPoints h1;
-    h1.HP = 70;
-    printf("h1: %d\n", h1.HP);
+    Queue<int> q1;
+    q1.pushBack(67);
+    q1.pushBack(68);
 
-    h1+= 10;
-    printf("h1: %d\n", h1.HP);
+    printf("q1.head() = %d\n", q1.head->data);
+    printf("q1.tail() = %d\n", q1.tail->data);
 
-    printf("h1 + 10: %d\n", (h1 + 10).HP); // 90
-
-    printf("10 + h1: %d\n", (10 + h1).HP); // 90
-
-
-    printf("h1 - 10: %d\n", (h1 - 10).HP); // 70
-//    printf("10 - h1: %d\n", (10 - h1).HP); // 0
-
-    printf("h1: %d\n", h1.HP); // 80
+    return 0;
 }

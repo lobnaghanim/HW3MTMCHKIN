@@ -5,7 +5,7 @@ HealthPoints::HealthPoints(int max_HP) {
         throw HealthPoints::InvalidArgument();
     }
     HP = max_HP;
-    maximum_HP = max_HP;
+    maxHP = max_HP;
 }
 
 HealthPoints& HealthPoints::operator-=(int healthPoints) {
@@ -20,8 +20,8 @@ HealthPoints& HealthPoints::operator-=(int healthPoints) {
 
 #include <iostream>
 HealthPoints& HealthPoints::operator+=(int healthPoints) {
-    if (HP + healthPoints > maximum_HP) {
-        HP = maximum_HP;
+    if (HP + healthPoints > maxHP) {
+        HP = maxHP;
     } else {
         HP += healthPoints;
     }
@@ -34,6 +34,7 @@ HealthPoints operator+(const HealthPoints& healthPoints ,int healthPointsToAdd){
     result += healthPointsToAdd;
     return result;
 }
+
 HealthPoints operator+(int healthPointsToAdd, const HealthPoints& healthPoints){
     HealthPoints result = healthPoints;
     result += healthPointsToAdd;
@@ -46,8 +47,32 @@ HealthPoints operator-(const HealthPoints &healthPoints, int healthPointsToSub) 
     return result;
 }
 
-//HealthPoints operator-(int healthPointsToSub, const HealthPoints &healthPoints) {
-//    HealthPoints result = healthPoints;
-//    result -= healthPointsToSub;
-//    return result;
-//}
+bool operator==(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2){
+    return healthPoints1.HP == healthPoints2.HP;
+}
+
+bool operator!=(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2) {
+    return !(healthPoints1 == healthPoints2);
+}
+
+bool operator<(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2) {
+    return (healthPoints1.HP < healthPoints2.HP);
+}
+
+bool operator>=(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2) {
+    return !(healthPoints1 < healthPoints2);
+}
+
+bool operator>(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2) {
+    return healthPoints2 < healthPoints1;
+}
+
+bool operator<=(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2) {
+    return !(healthPoints1 > healthPoints2);
+}
+
+std::ostream& operator<<(std::ostream& stream, const HealthPoints &healthPoints){
+    stream << healthPoints.HP << '(' << healthPoints.maxHP << ')';
+    return stream;
+}
+
