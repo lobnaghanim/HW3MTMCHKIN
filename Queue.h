@@ -19,13 +19,13 @@ public:
     Queue(): head(nullptr), tail(nullptr) , currSize(0){}
     ~Queue() {
         Node* t_ptr = head;
-        printf("Queue size is %d\n", currSize);
+
         while(t_ptr != nullptr){
             Node* t_ptr2 = t_ptr->next;
             delete t_ptr;
             t_ptr = t_ptr2;
         }
-        printf("Queue destroyed\n\n");
+
     }
     // copy constructor
     Queue(Queue const &queue): head(nullptr), tail(nullptr), currSize(0){
@@ -88,12 +88,12 @@ public:
 
         return newQueue;
     }
-    template <class Condition>
-    friend void transform(Queue& queue, Condition condition){
+    template <class Operator>
+    friend void transform(Queue& queue, Operator op){
         //it takes a reference to change the actual queue
         Node* temp = queue.getHead();
         while(temp != nullptr){
-            condition(temp->data);
+            op(temp->data);
             temp = temp->next;
         }
     }

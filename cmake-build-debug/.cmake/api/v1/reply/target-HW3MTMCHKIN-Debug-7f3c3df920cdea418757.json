@@ -45,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "-g"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -55,7 +55,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/."
+					"path" : "C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/."
 				}
 			],
 			"language" : "CXX",

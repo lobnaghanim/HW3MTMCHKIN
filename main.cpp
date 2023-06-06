@@ -12,7 +12,7 @@ static void setFourtyTwo(int& n)
 }
 static void addOne(int& n)
 {
-    n+=1;
+    n += 1;
 }
 int main(){
     Queue<int> queue1;
@@ -31,11 +31,12 @@ int main(){
     transform(queue1, setFourtyTwo);
     transform(queue2, addOne);
 
+    printf("--------------------\n");
     printf("queue 1 first element: %d\n", queue1.front());
     printf("queue 1 second element: %d\n", queue1.getHead()->next->data);
     printf("queue 1 third element: %d\n", queue1.getHead()->next->next->data);
     printf("queue 1 third element: %d\n", queue1.getHead()->next->next->next->data);
-
+    printf("--------------------\n");
     printf("queue 2 first element: %d\n", queue2.front());
     printf("queue 2 second element: %d\n", queue2.getHead()->next->data);
     printf("queue 2 third element: %d\n", queue2.getHead()->next->next->data);
