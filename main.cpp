@@ -28,18 +28,19 @@ int main(){
     printf("queue 2 second element: %d\n", queue2.getHead()->next->data);
     printf("queue 2 third element: %d\n", queue2.getHead()->next->next->data);
 
-    transform(queue1, setFourtyTwo);
-    transform(queue2, addOne);
+    Queue<int>::Iterator it = queue2.end();
+    printf("the iterator's size is: %d\n", it.index);
 
-    printf("--------------------\n");
-    printf("queue 1 first element: %d\n", queue1.front());
-    printf("queue 1 second element: %d\n", queue1.getHead()->next->data);
-    printf("queue 1 third element: %d\n", queue1.getHead()->next->next->data);
-    printf("queue 1 third element: %d\n", queue1.getHead()->next->next->next->data);
-    printf("--------------------\n");
-    printf("queue 2 first element: %d\n", queue2.front());
-    printf("queue 2 second element: %d\n", queue2.getHead()->next->data);
-    printf("queue 2 third element: %d\n", queue2.getHead()->next->next->data);
+    Queue<int>::Iterator it2 = queue2.begin();
+    printf("it != it2: %d\n", it != it2); // 1
+    printf("it != it: %d\n", it != it); // 0
+
+    printf("------------------\n");
+    printf("it2 index is: %d\n", it2.index); // 0
+    printf("the data of it2.node is: %d\n", *it2); // 2
+    ++it2;
+    printf("it2 index is: %d\n", it2.index); // 1
+    printf("the data of it2.node is: %d\n", *it2); // 3
 
     return 0;
 }

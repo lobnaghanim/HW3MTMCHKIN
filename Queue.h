@@ -1,6 +1,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 #include <iostream>
+#include <assert.h>
 
 template <typename T> class Queue {
 private:
@@ -9,7 +10,9 @@ private:
         T data;
         Node* next;
         explicit Node(const T& element): data(element), next(nullptr) {}
-//        ~Node() { printf("Node destructor\n");}
+        bool operator==(Node& other){ // might contain error.
+            return (data == other.data && next == other.next);
+        }
     };
     Node* tail;
     Node* head;
@@ -83,8 +86,6 @@ public:
             }
             temp = temp->next;
         }
-//        printf("t_ptr's data is %d\n", temp->data);
-//        printf("t_ptr's next is %d\n", temp->next->data);
 
         return newQueue;
     }
@@ -97,6 +98,50 @@ public:
             temp = temp->next;
         }
     }
+
+
+    class Iterator{
+    private:
+        Iterator(const Node* node, int index): node(node), index(index){}
+        friend class Queue;
+    public:
+
+
+        int index;
+        Iterator(const Iterator&) = default;
+        Iterator& operator++(){
+            assert(node != nullptr);
+            node = node->next;
+            index++;
+            return *this;
+        }
+
+        Iterator operator++(int){
+            Iterator result = *this;
+            ++*this;
+            return result;
+        }
+
+        bool operator!=(Iterator it2){ // might contain error.
+            return !(node == it2.node && index == it2.index);
+        }
+
+        const T& operator*() const{
+            assert(node != nullptr);
+            return node->data;
+        }
+
+        const Node* node;
+    };
+
+    Iterator begin() const{
+        return Iterator(head, 0);
+    }
+
+    Iterator end() const{
+        return Iterator(nullptr, currSize);
+    }
+
 };
 
 

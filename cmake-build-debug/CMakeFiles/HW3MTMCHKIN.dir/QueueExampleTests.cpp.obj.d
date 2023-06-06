@@ -1,5 +1,6 @@
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: \
- C:\Users\Ali\ Harbaji\Documents\GitHub\HW3MTMCHKIN\main.cpp \
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj: \
+ C:\Users\Ali\ Harbaji\Documents\GitHub\HW3MTMCHKIN\QueueExampleTests.cpp \
+ C:\Users\Ali\ Harbaji\Documents\GitHub\HW3MTMCHKIN\Queue.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -132,6 +133,4 @@ CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- C:\Users\Ali\ Harbaji\Documents\GitHub\HW3MTMCHKIN\HealthPoints.h \
- C:\Users\Ali\ Harbaji\Documents\GitHub\HW3MTMCHKIN\Queue.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/assert.h
