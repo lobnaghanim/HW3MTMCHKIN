@@ -90,6 +90,7 @@ public:
     }
     template <class Condition>
     friend void transform(Queue& queue, Condition condition){
+        //it takes a reference to change the actual queue
         Node* temp = queue.getHead();
         while(temp != nullptr){
             condition(temp->data);
