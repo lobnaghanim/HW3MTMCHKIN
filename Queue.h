@@ -88,7 +88,15 @@ public:
 
         return newQueue;
     }
-
+    template <class Condition>
+    friend void transform(Queue& queue, Condition condition){
+        Node* temp = queue.getHead();
+        while(temp != nullptr){
+            condition(temp->data);
+            temp = temp->next;
+        }
+    }
 };
+
 
 #endif

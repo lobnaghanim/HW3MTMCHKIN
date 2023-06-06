@@ -49,27 +49,6 @@ cmake_ninja_workdir = C$:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/cmake-bui
 
 build cmake_object_order_depends_target_HW3MTMCHKIN: phony || CMakeFiles/HW3MTMCHKIN.dir
 
-build CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj: CXX_COMPILER__HW3MTMCHKIN_Debug C$:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/HealthPointsExampleTest.cpp || cmake_object_order_depends_target_HW3MTMCHKIN
-  DEP_FILE = CMakeFiles\HW3MTMCHKIN.dir\HealthPointsExampleTest.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
-  INCLUDES = -IC:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/.
-  OBJECT_DIR = CMakeFiles\HW3MTMCHKIN.dir
-  OBJECT_FILE_DIR = CMakeFiles\HW3MTMCHKIN.dir
-
-build CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj: CXX_COMPILER__HW3MTMCHKIN_Debug C$:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/QueueExampleTests.cpp || cmake_object_order_depends_target_HW3MTMCHKIN
-  DEP_FILE = CMakeFiles\HW3MTMCHKIN.dir\QueueExampleTests.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
-  INCLUDES = -IC:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/.
-  OBJECT_DIR = CMakeFiles\HW3MTMCHKIN.dir
-  OBJECT_FILE_DIR = CMakeFiles\HW3MTMCHKIN.dir
-
-build CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj: CXX_COMPILER__HW3MTMCHKIN_Debug C$:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/TestMain.cpp || cmake_object_order_depends_target_HW3MTMCHKIN
-  DEP_FILE = CMakeFiles\HW3MTMCHKIN.dir\TestMain.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
-  INCLUDES = -IC:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/.
-  OBJECT_DIR = CMakeFiles\HW3MTMCHKIN.dir
-  OBJECT_FILE_DIR = CMakeFiles\HW3MTMCHKIN.dir
-
 build CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj: CXX_COMPILER__HW3MTMCHKIN_Debug C$:/Users/97252/Documents/GitHub/HW2/HW3MTMCHKIN/HealthPoints.cpp || cmake_object_order_depends_target_HW3MTMCHKIN
   DEP_FILE = CMakeFiles\HW3MTMCHKIN.dir\HealthPoints.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
@@ -92,7 +71,7 @@ build CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: CXX_COMPILER__HW3MTMCHKIN_Debug C
 #############################################
 # Link the executable HW3MTMCHKIN.exe
 
-build HW3MTMCHKIN.exe: CXX_EXECUTABLE_LINKER__HW3MTMCHKIN_Debug CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj
+build HW3MTMCHKIN.exe: CXX_EXECUTABLE_LINKER__HW3MTMCHKIN_Debug CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\HW3MTMCHKIN.dir
