@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.23.2)
+cmake_minimum_required(VERSION 3.23.2) # uncomment if you're Ali
+#cmake_minimum_required(VERSION 3.15) # uncomment if you're Lobna
+
 project(HW3MTMCHKIN)
 
 set(CMAKE_CXX_STANDARD 14)
