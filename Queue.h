@@ -1,19 +1,13 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 #include <iostream>
-#include <assert.h>
+
 
 template <typename T> class Queue {
+
 private:
-    class Node {
-    public:
-        T data;
-        Node* next;
-        explicit Node(const T& element): data(element), next(nullptr) {}
-        bool operator==(Node& other){ // might contain error.
-            return (data == other.data && next == other.next);
-        }
-    };
+    class Node;
+
     Node* tail;
     Node* head;
     int currSize;
@@ -22,13 +16,11 @@ public:
     Queue(): head(nullptr), tail(nullptr) , currSize(0){}
     ~Queue() {
         Node* t_ptr = head;
-
         while(t_ptr != nullptr){
             Node* t_ptr2 = t_ptr->next;
             delete t_ptr;
             t_ptr = t_ptr2;
         }
-
     }
     // copy constructor
     Queue(Queue const &queue): head(nullptr), tail(nullptr), currSize(0){
@@ -39,27 +31,24 @@ public:
         }
     }
 
-    void pushBack(const T& element) {
-        Node * newNode = new Node(element);
+    class EmptyQueue : public std::exception {};
 
-        if (head == nullptr) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            tail->next = newNode;
-            tail = newNode;
-        }
-        currSize++;
-    }
+    void pushBack(const T& element);
+
 
     T& front() const{
+        if (head == nullptr){
+            throw EmptyQueue();
+        }
         return head->data;
     }
 
     void popFront(){
-        if(head == nullptr){ return;}
-
-        Node* t_ptr = head->next;
+        // handle exception
+        if(head == nullptr){
+            throw EmptyQueue(); // nullptr dereference
+        }
+        Node* t_ptr = head->next; // (*head).next
         delete head;
         head = t_ptr;
         currSize--;
@@ -68,10 +57,9 @@ public:
     Node* getHead() const{
         return head;
     }
-    Node* getTail() const{
-        return tail;
-    }
-
+//    Node* getTail() const{
+//        return tail;
+//    }
     int size() const{
         return currSize;
     }
@@ -86,9 +74,9 @@ public:
             }
             temp = temp->next;
         }
-
         return newQueue;
     }
+
     template <class Operator>
     friend void transform(Queue& queue, Operator op){
         //it takes a reference to change the actual queue
@@ -99,50 +87,167 @@ public:
         }
     }
 
+    class Iterator;
+    class ConstIterator;
 
-    class Iterator{
-    private:
-        Iterator(const Node* node, int index): node(node), index(index){}
-        friend class Queue;
-    public:
-
-
-        int index;
-        Iterator(const Iterator&) = default;
-        Iterator& operator++(){
-            assert(node != nullptr);
-            node = node->next;
-            index++;
-            return *this;
-        }
-
-        Iterator operator++(int){
-            Iterator result = *this;
-            ++*this;
-            return result;
-        }
-
-        bool operator!=(Iterator it2){ // might contain error.
-            return !(node == it2.node && index == it2.index);
-        }
-
-        const T& operator*() const{
-            assert(node != nullptr);
-            return node->data;
-        }
-
-        const Node* node;
-    };
-
-    Iterator begin() const{
+    Iterator begin(){
         return Iterator(head, 0);
     }
 
-    Iterator end() const{
+    Iterator end(){
         return Iterator(nullptr, currSize);
     }
 
+    ConstIterator begin() const{
+        return ConstIterator(head, 0);
+    }
+
+    ConstIterator end() const{
+        return ConstIterator(nullptr, currSize);
+    }
+
+
 };
 
+// Implementation of Node
+template <typename T>
+class Queue<T>::Node{
+    public:
+    T data;
+    Node* next;
+    explicit Node(const T& element): data(element), next(nullptr) {}
+    bool operator==(Node& other){ // might contain error.
+        return (data == other.data && next == other.next);
+    }
+};
+
+// Implementation of Queue's methods
+
+// pushBack
+template <typename T>
+void  Queue<T>::pushBack(const T &element) {
+    try {
+        Node *newNode = new Node(element);
+        if (head == nullptr) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+        currSize++;
+    }catch (std::bad_alloc& e){
+        // rethrow error
+        throw e;
+    }
+}
+
+
+// Implementation of Iterator
+template <typename T>
+class Queue<T>::Iterator{
+private:
+    Iterator(Node* node, int index): node(node), index(index){}
+    friend class Queue;
+public:
+    int index;
+    Node* node;
+
+    class InvalidOperation : public std::exception {};
+    Iterator(const Iterator&) = default;
+
+    Iterator& operator++(){
+        // handle exception
+        if(node == nullptr){
+            throw InvalidOperation(); // nullptr dereference
+        }
+        node = node->next;
+        index++;
+        return *this;
+    }
+
+    Iterator operator++(int){
+        // handle exception
+        if(node == nullptr){
+            throw InvalidOperation(); // nullptr dereference
+        }
+        Iterator result = *this;
+
+        try {
+            // try the implementation of operator++()
+            operator++(); // might be an error
+        } catch (InvalidOperation& e) {
+            throw e;
+        }
+
+        return result;
+    }
+
+    bool operator!=(Iterator it2){ // might contain error.
+        return !(node == it2.node && index == it2.index);
+    }
+
+    const T& operator*(){
+        // handle exception
+        if(node == nullptr){
+            throw InvalidOperation(); // nullptr dereference
+        }
+        return node->data;
+    }
+};
+
+
+// Implementation of ConstIterator
+template <typename T>
+class Queue<T>::ConstIterator{
+private:
+    ConstIterator(const Node* node, int index): node(node), index(index){}
+    friend class Queue;
+public:
+    int index;
+    const Node* node;
+
+    class InvalidOperation : public std::exception {};
+    ConstIterator(const ConstIterator&) = default;
+
+    ConstIterator& operator++(){
+        // handle exception
+        if(node == nullptr){
+            throw InvalidOperation(); // nullptr dereference
+        }
+        node = node->next;
+        index++;
+        return *this;
+    }
+
+    ConstIterator operator++(int){
+        // handle exception
+        if(node == nullptr){
+            throw InvalidOperation(); // nullptr dereference
+        }
+        ConstIterator result = *this;
+
+        try {
+            // try the implementation of operator++()
+            operator++(); // might be an error
+        } catch (InvalidOperation& e) {
+            throw e;
+        }
+
+        return result;
+    }
+
+    bool operator!=(ConstIterator it2) const{ // might contain error.
+        return !(node == it2.node && index == it2.index);
+    }
+
+    const T& operator*() const{
+        // handle exception
+        if(node == nullptr){
+            throw InvalidOperation(); // nullptr dereference
+        }
+        return node->data;
+    }
+};
 
 #endif
