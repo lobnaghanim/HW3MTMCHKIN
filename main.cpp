@@ -2,6 +2,12 @@
 using namespace std;
 #include "HealthPoints.h"
 #include "Queue.h"
+#include <vector>
+// include REQUIRE
+#define REQUIRE(condition) \
+    if (!(condition)) { \
+        std::cout << "Line " << __LINE__ << ": requirement failed: " << #condition << std::endl; \
+    }
 
 bool isEven(int n){
     return !(n % 2);
@@ -20,34 +26,50 @@ int main(){
     queue1.pushBack(2);
     queue1.pushBack(3);
     queue1.pushBack(4);
+    queue1.pushBack(5);
 
-    //Queue<int> queue2 = filter(queue1, isEven);
-    Queue<int> queue2=queue1;
-
-    printf("------------------\n");
-    for(Queue<int>::Iterator it = queue2.begin(); it != queue2.end(); ++it){
-        printf("it: %d\n", *it);
+    //print queue1
+    cout << "queue1: ";
+    Queue<int>::Iterator it = queue1.begin();
+    while(it != queue1.end()){
+        cout << *it << " ";
+        ++it;
     }
 
-    printf("------------------\n");
+    cout << endl;
 
-    Queue<int> queue6;
-    queue6.pushBack(1);
+    // modify queue1
+    Queue<int> queue2 = queue1;
 
     try {
-        queue6.popFront();
-    }
-    catch (Queue<int>::EmptyQueue e) {
-        ::printf("Empty Queue!\n");
+        queue2 = queue1;
+        queue1.pushBack(6);
+        queue1.pushBack(7);
+        queue1.pushBack(8);
+
+        //print queue1
+        cout << "queue1: ";
+        it = queue1.begin();
+        while(it != queue1.end()){
+            cout << *it << " ";
+            ++it;
+        }
+        cout << endl;
+
+        // print queue2
+        cout << "queue2: ";
+        it = queue2.begin();
+        while(it != queue2.end()){
+            cout << *it << " ";
+            ++it;
+        }
+        cout << endl;
+
+    }catch (Queue<int>::Iterator::InvalidOperation& e){
+        // rethrow error
+        ::printf("\nOperation not allowed\n");
     }
 
-    Queue<int>::Iterator endIterator = queue6.end();
-    try {
-        endIterator++;
-    }
-    catch (Queue<int>::Iterator::InvalidOperation& e) {
-        printf("Invalid Operation!\n");
-    }
 
 
     return 0;

@@ -26,8 +26,14 @@ public:
     Queue(Queue const &queue): head(nullptr), tail(nullptr), currSize(0){
         Node* t_ptr = queue.getHead();
         while(t_ptr != nullptr){
-            pushBack(t_ptr->data);
-            t_ptr = t_ptr->next;
+            try {
+                pushBack(t_ptr->data);
+                t_ptr = t_ptr->next;
+            }catch (std::bad_alloc& e){
+                // rethrow error
+                throw e;
+            }
+
         }
     }
 
@@ -71,7 +77,12 @@ public:
         Node* temp = queue.getHead();
         while(temp != nullptr){
             if (condition(temp->data)){
-                newQueue.pushBack(temp->data);
+                try {
+                    newQueue.pushBack(temp->data);
+                }catch (std::bad_alloc& e){
+                    // rethrow error
+                    throw e;
+                }
             }
             temp = temp->next;
         }
@@ -155,6 +166,7 @@ public:
     int index;
 
     class InvalidOperation : public std::exception {};
+
     Iterator(const Iterator&) = default;
 
     Iterator& operator++(){
