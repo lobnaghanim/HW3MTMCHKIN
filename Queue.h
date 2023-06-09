@@ -64,8 +64,9 @@ public:
         return currSize;
     }
 
+
     template <class Condition>
-    friend Queue<T> filter(Queue queue, Condition condition){
+    friend Queue<T> filter(const Queue& queue, Condition condition){
         Queue<T> newQueue;
         Node* temp = queue.getHead();
         while(temp != nullptr){
@@ -116,7 +117,7 @@ class Queue<T>::Node{
     T data;
     Node* next;
     explicit Node(const T& element): data(element), next(nullptr) {}
-    bool operator==(Node& other){ // might contain error.
+    bool operator==(const Node& other){ // might contain error.
         return (data == other.data && next == other.next);
     }
 };
@@ -184,7 +185,7 @@ public:
         return result;
     }
 
-    bool operator!=(Iterator it2){ // might contain error.
+    bool operator!=(const Iterator& it2){ // might contain error.
         return !(node == it2.node && index == it2.index);
     }
 
@@ -238,7 +239,7 @@ public:
         return result;
     }
 
-    bool operator!=(ConstIterator it2) const{ // might contain error.
+    bool operator!=(const ConstIterator& it2) const{ // might contain error.
         return !(node == it2.node && index == it2.index);
     }
 
