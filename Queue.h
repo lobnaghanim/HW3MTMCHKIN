@@ -188,7 +188,7 @@ public:
         return !(node == it2.node && index == it2.index);
     }
 
-    const T& operator*(){
+    T& operator*(){
         // handle exception
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference
