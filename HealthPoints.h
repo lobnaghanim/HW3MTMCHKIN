@@ -12,6 +12,10 @@ public:
     HealthPoints& operator-=(int healthPoints);
     HealthPoints& operator+=(int healthPoints);
 
+    // we need HealthPoints hp = 100; to work and HealthPoints constructor to be explicit
+    // so we need to define operator= for int
+//    HealthPoints& operator=(int healthPoints);
+
     friend HealthPoints operator+(const HealthPoints& healthPoints , int healthPointsToAdd);
     friend HealthPoints operator+(int healthPointsToAdd, const HealthPoints& healthPoints);
 

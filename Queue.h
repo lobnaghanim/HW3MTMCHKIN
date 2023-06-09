@@ -8,8 +8,8 @@ template <typename T> class Queue {
 private:
     class Node;
 
-    Node* tail;
     Node* head;
+    Node* tail;
     int currSize;
 
 public:
@@ -146,12 +146,13 @@ void  Queue<T>::pushBack(const T &element) {
 // Implementation of Iterator
 template <typename T>
 class Queue<T>::Iterator{
+
 private:
     Iterator(Node* node, int index): node(node), index(index){}
     friend class Queue;
 public:
-    int index;
     Node* node;
+    int index;
 
     class InvalidOperation : public std::exception {};
     Iterator(const Iterator&) = default;
@@ -204,8 +205,8 @@ private:
     ConstIterator(const Node* node, int index): node(node), index(index){}
     friend class Queue;
 public:
-    int index;
     const Node* node;
+    int index;
 
     class InvalidOperation : public std::exception {};
     ConstIterator(const ConstIterator&) = default;
