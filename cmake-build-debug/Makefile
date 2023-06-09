@@ -152,29 +152,77 @@ HealthPoints.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.s
 .PHONY : HealthPoints.cpp.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+HealthPointsExampleTest.obj: HealthPointsExampleTest.cpp.obj
+.PHONY : HealthPointsExampleTest.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+HealthPointsExampleTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj
+.PHONY : HealthPointsExampleTest.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+HealthPointsExampleTest.i: HealthPointsExampleTest.cpp.i
+.PHONY : HealthPointsExampleTest.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/main.cpp.i
-.PHONY : main.cpp.i
+HealthPointsExampleTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.i
+.PHONY : HealthPointsExampleTest.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+HealthPointsExampleTest.s: HealthPointsExampleTest.cpp.s
+.PHONY : HealthPointsExampleTest.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/main.cpp.s
-.PHONY : main.cpp.s
+HealthPointsExampleTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.s
+.PHONY : HealthPointsExampleTest.cpp.s
+
+QueueExampleTests.obj: QueueExampleTests.cpp.obj
+.PHONY : QueueExampleTests.obj
+
+# target to build an object file
+QueueExampleTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj
+.PHONY : QueueExampleTests.cpp.obj
+
+QueueExampleTests.i: QueueExampleTests.cpp.i
+.PHONY : QueueExampleTests.i
+
+# target to preprocess a source file
+QueueExampleTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.i
+.PHONY : QueueExampleTests.cpp.i
+
+QueueExampleTests.s: QueueExampleTests.cpp.s
+.PHONY : QueueExampleTests.s
+
+# target to generate assembly for a file
+QueueExampleTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.s
+.PHONY : QueueExampleTests.cpp.s
+
+TestMain.obj: TestMain.cpp.obj
+.PHONY : TestMain.obj
+
+# target to build an object file
+TestMain.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj
+.PHONY : TestMain.cpp.obj
+
+TestMain.i: TestMain.cpp.i
+.PHONY : TestMain.i
+
+# target to preprocess a source file
+TestMain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.i
+.PHONY : TestMain.cpp.i
+
+TestMain.s: TestMain.cpp.s
+.PHONY : TestMain.s
+
+# target to generate assembly for a file
+TestMain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HW3MTMCHKIN.dir\build.make CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.s
+.PHONY : TestMain.cpp.s
 
 # Help Target
 help:
@@ -188,9 +236,15 @@ help:
 	@echo ... HealthPoints.obj
 	@echo ... HealthPoints.i
 	@echo ... HealthPoints.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... HealthPointsExampleTest.obj
+	@echo ... HealthPointsExampleTest.i
+	@echo ... HealthPointsExampleTest.s
+	@echo ... QueueExampleTests.obj
+	@echo ... QueueExampleTests.i
+	@echo ... QueueExampleTests.s
+	@echo ... TestMain.obj
+	@echo ... TestMain.i
+	@echo ... TestMain.s
 .PHONY : help
 
 

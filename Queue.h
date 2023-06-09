@@ -22,9 +22,10 @@ public:
             t_ptr = t_ptr2;
         }
     }
+
     // copy constructor
     Queue(Queue const &queue): head(nullptr), tail(nullptr), currSize(0){
-        Node* t_ptr = queue.getHead();
+        Node* t_ptr = queue.head;
         while(t_ptr != nullptr){
             try {
                 pushBack(t_ptr->data);
@@ -39,7 +40,7 @@ public:
 
     class EmptyQueue : public std::exception {};
 
-    void pushBack(const T& element);
+    void pushBack(T element);
 
 
     T& front() const{
@@ -120,23 +121,9 @@ public:
 
 };
 
-// Implementation of Node
-template <typename T>
-class Queue<T>::Node{
-    public:
-    T data;
-    Node* next;
-    explicit Node(const T& element): data(element), next(nullptr) {}
-    bool operator==(const Node& other){ // might contain error.
-        return (data == other.data && next == other.next);
-    }
-};
-
-// Implementation of Queue's methods
-
-// pushBack
-template <typename T>
-void  Queue<T>::pushBack(const T &element) {
+// Implementation of pushBack deep copy
+template<typename T>
+void Queue<T>::pushBack(T element) {
     try {
         Node *newNode = new Node(element);
         if (head == nullptr) {
@@ -151,7 +138,21 @@ void  Queue<T>::pushBack(const T &element) {
         // rethrow error
         throw e;
     }
+
 }
+
+// Implementation of Node
+template <typename T>
+class Queue<T>::Node{
+    public:
+    T data;
+    Node* next;
+    explicit Node(T element): data(element), next(nullptr) {}
+    bool operator==(const Node& other){ // might contain error.
+        return (data == other.data && next == other.next);
+    }
+};
+
 
 
 // Implementation of Iterator

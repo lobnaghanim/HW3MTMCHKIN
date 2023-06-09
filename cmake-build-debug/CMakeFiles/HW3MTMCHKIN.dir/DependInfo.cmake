@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/allih/OneDrive/Documents/GitHub/HW3MTMCHKIN/HealthPoints.cpp" "CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj" "gcc" "CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj.d"
-  "C:/Users/allih/OneDrive/Documents/GitHub/HW3MTMCHKIN/main.cpp" "CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj" "gcc" "CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj.d"
+  "C:/Users/allih/OneDrive/Documents/GitHub/HW3MTMCHKIN/HealthPointsExampleTest.cpp" "CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj" "gcc" "CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj.d"
+  "C:/Users/allih/OneDrive/Documents/GitHub/HW3MTMCHKIN/QueueExampleTests.cpp" "CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj" "gcc" "CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj.d"
+  "C:/Users/allih/OneDrive/Documents/GitHub/HW3MTMCHKIN/TestMain.cpp" "CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj" "gcc" "CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj.d"
   )
 
 # Targets to which this target links.

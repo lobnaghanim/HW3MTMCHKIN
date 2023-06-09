@@ -35,40 +35,31 @@ int main(){
         cout << *it << " ";
         ++it;
     }
-
     cout << endl;
-
-    // modify queue1
     Queue<int> queue2 = queue1;
 
-    try {
-        queue2 = queue1;
-        queue1.pushBack(6);
-        queue1.pushBack(7);
-        queue1.pushBack(8);
+    queue1.popFront();
+    queue1.pushBack(6);
 
-        //print queue1
-        cout << "queue1: ";
-        it = queue1.begin();
-        while(it != queue1.end()){
-            cout << *it << " ";
-            ++it;
-        }
-        cout << endl;
-
-        // print queue2
-        cout << "queue2: ";
-        it = queue2.begin();
-        while(it != queue2.end()){
-            cout << *it << " ";
-            ++it;
-        }
-        cout << endl;
-
-    }catch (Queue<int>::Iterator::InvalidOperation& e){
-        // rethrow error
-        ::printf("\nOperation not allowed\n");
+    // print queue2
+    cout << "queue2: ";
+    Queue<int>::Iterator it2 = queue2.begin();
+    while(it2 != queue2.end()){
+        cout << *it2 << " ";
+        ++it2;
     }
+
+    Queue<int> queue3;
+    queue3 = queue2;
+    queue2.popFront();
+    cout << endl;
+    cout << "queue3: ";
+    Queue<int>::Iterator it3 = queue3.begin();
+    while(it3 != queue3.end()){
+        cout << *it3 << " ";
+        ++it3;
+    }
+    cout << endl;
 
 
 
