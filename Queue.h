@@ -79,10 +79,9 @@ public:
     }
 
     template <class Operator>
-    friend void transform(Queue& queue, Operator op){
-        //it takes a reference to change the actual queue
+    friend void transform(Queue& queue, Operator op) {
         Node* temp = queue.getHead();
-        while(temp != nullptr){
+        while (temp != nullptr) {
             op(temp->data);
             temp = temp->next;
         }
@@ -222,7 +221,7 @@ public:
         return *this;
     }
 
-    ConstIterator operator++(int){
+    ConstIterator operator++(int) {
         // handle exception
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference

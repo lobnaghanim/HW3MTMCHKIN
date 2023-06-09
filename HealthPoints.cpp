@@ -2,7 +2,7 @@
 
 HealthPoints::HealthPoints(int max_HP) {
     if(max_HP <= 0){
-        throw HealthPoints::InvalidArgument();
+        throw InvalidArgument();
     }
     HP = max_HP;
     maxHP = max_HP;
@@ -74,6 +74,13 @@ bool operator<=(const HealthPoints &healthPoints1, const HealthPoints &healthPoi
 std::ostream& operator<<(std::ostream& stream, const HealthPoints &healthPoints){
     stream << healthPoints.HP << '(' << healthPoints.maxHP << ')';
     return stream;
+}
+
+HealthPoints &HealthPoints::operator=(int healthPoints) {
+    HealthPoints result = HealthPoints(healthPoints);
+    HP = result.HP;
+    maxHP = result.maxHP;
+    return *this;
 }
 
 
