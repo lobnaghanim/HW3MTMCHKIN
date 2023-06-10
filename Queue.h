@@ -8,30 +8,30 @@ template <typename T> class Queue {
 private:
     class Node;
 
-    Node* head;
-    Node* tail;
-    int currSize;
+    Node* m_head;
+    Node* m_tail;
+    int n_currSize;
 
 public:
-    Queue(): head(nullptr), tail(nullptr) , currSize(0){}
+    Queue(): m_head(nullptr), m_tail(nullptr) , n_currSize(0){}
     ~Queue() {
-        Node* t_ptr = head;
+        Node* t_ptr = m_head;
         while(t_ptr != nullptr){
-            Node* t_ptr2 = t_ptr->next;
+            Node* t_ptr2 = t_ptr->m_next;
             delete t_ptr;
             t_ptr = t_ptr2;
         }
-        head = nullptr;
-        tail = nullptr;
+        m_head = nullptr;
+        m_tail = nullptr;
     }
 
     // copy constructor
-    Queue(Queue const &queue): head(nullptr), tail(nullptr), currSize(0){
-        Node* t_ptr = queue.head;
+    Queue(Queue const &queue): m_head(nullptr), m_tail(nullptr), n_currSize(0){
+        Node* t_ptr = queue.m_head;
         while(t_ptr != nullptr){
             try {
-                pushBack(t_ptr->data);
-                t_ptr = t_ptr->next;
+                pushBack(t_ptr->m_data);
+                t_ptr = t_ptr->m_next;
             }catch (std::bad_alloc& e){
                 // rethrow error
                 throw e;
@@ -62,11 +62,11 @@ public:
             // Create a temporary Queue for the deep copy
             Queue tempQueue;
             // Perform the deep copy into the temporary Queue
-            Node* t_ptr = queue.head;
+            Node* t_ptr = queue.m_head;
             while (t_ptr != nullptr) {
                 try {
-                    tempQueue.pushBack(t_ptr->data);
-                    t_ptr = t_ptr->next;
+                    tempQueue.pushBack(t_ptr->m_data);
+                    t_ptr = t_ptr->m_next;
                 } catch (std::bad_alloc& e) {
 
                     // Rethrow error or handle as needed
@@ -75,10 +75,9 @@ public:
             }
             // Deep copy succeeded, update the current object
             // by swapping its contents with the temporary Queue
-            std::swap(head, tempQueue.head);
-            std::swap(tail, tempQueue.tail);
-
-            currSize = tempQueue.currSize;
+            std::swap(m_head, tempQueue.m_head);
+            std::swap(m_tail, tempQueue.m_tail);
+            n_currSize = tempQueue.n_currSize;
         }
         return *this;
     }
@@ -91,39 +90,39 @@ public:
 
     // was T& front() const{}
     T& front(){
-        if (head == nullptr){
+        if (m_head == nullptr){
             throw EmptyQueue();
         }
-        return head->data;
+        return m_head->m_data;
     }
 
     // new implementation
     const T& front() const{
-        if (head == nullptr){
+        if (m_head == nullptr){
             throw EmptyQueue();
         }
-        return head->data;
+        return m_head->m_data;
     }
 
     void popFront(){
         // handle exception
-        if(head == nullptr){
+        if(m_head == nullptr){
             throw EmptyQueue(); // nullptr dereference
         }
-        Node* t_ptr = head->next; // (*head).next
-        delete head;
-        head = t_ptr;
-        currSize--;
+        Node* t_ptr = m_head->m_next; // (*head).next
+        delete m_head;
+        m_head = t_ptr;
+        n_currSize--;
     }
 
     Node* getHead() const{
-        return head;
+        return m_head;
     }
 //    Node* getTail() const{
 //        return tail;
 //    }
     int size() const{
-        return currSize;
+        return n_currSize;
     }
 
     // does not create a deep copy
@@ -132,15 +131,15 @@ public:
         Queue<T> newQueue;
         Node* temp = queue.getHead();
         while(temp != nullptr){
-            if (condition(temp->data)){
+            if (condition(temp->m_data)){
                 try {
-                    newQueue.pushBack(temp->data);
+                    newQueue.pushBack(temp->m_data);
                 }catch (std::bad_alloc& e){
                     // rethrow error
                     throw e;
                 }
             }
-            temp = temp->next;
+            temp = temp->m_next;
         }
         return newQueue;
     }
@@ -149,8 +148,8 @@ public:
     friend void transform(Queue& queue, Operator op) {
         Node* temp = queue.getHead();
         while (temp != nullptr) {
-            op(temp->data);
-            temp = temp->next;
+            op(temp->m_data);
+            temp = temp->m_next;
         }
     }
 
@@ -158,19 +157,19 @@ public:
     class ConstIterator;
 
     Iterator begin(){
-        return Iterator(head, 0);
+        return Iterator(m_head, 0);
     }
 
     Iterator end(){
-        return Iterator(nullptr, currSize);
+        return Iterator(nullptr, n_currSize);
     }
 
     ConstIterator begin() const{
-        return ConstIterator(head, 0);
+        return ConstIterator(m_head, 0);
     }
 
     ConstIterator end() const{
-        return ConstIterator(nullptr, currSize);
+        return ConstIterator(nullptr, n_currSize);
     }
 
 
@@ -181,15 +180,15 @@ template<typename T>
 void Queue<T>::pushBack(T element) {
     try {
         Node *newNode = new Node(element);
-        if (head == nullptr) {
-            head = newNode;
-            tail = newNode;
+        if (m_head == nullptr) {
+            m_head = newNode;
+            m_tail = newNode;
         } else {
-            tail->next = newNode;
-            tail = newNode;
-            tail->next = nullptr;
+            m_tail->m_next = newNode;
+            m_tail = newNode;
+            m_tail->m_next = nullptr;
         }
-        currSize++;
+        n_currSize++;
     }catch (std::bad_alloc& e){
         // rethrow error
         throw e;
@@ -201,11 +200,11 @@ void Queue<T>::pushBack(T element) {
 template <typename T>
 class Queue<T>::Node{
 public:
-    T data;
-    Node* next;
-    explicit Node(T element): data(element), next(nullptr) {}
+    T m_data;
+    Node* m_next;
+    explicit Node(T element): m_data(element), m_next(nullptr) {}
     bool operator==(const Node& other){ // might contain error.
-        return (data == other.data && next == other.next);
+        return (m_data == other.m_data && m_next == other.m_next);
     }
 };
 
@@ -231,7 +230,7 @@ public:
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference
         }
-        node = node->next;
+        node = node->m_next;
         index++;
         return *this;
     }
@@ -262,7 +261,7 @@ public:
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference
         }
-        return node->data;
+        return node->m_data;
     }
 };
 
@@ -285,7 +284,7 @@ public:
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference
         }
-        node = node->next;
+        node = node->m_next;
         index++;
         return *this;
     }
@@ -316,7 +315,7 @@ public:
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference
         }
-        return node->data;
+        return node->m_data;
     }
 };
 

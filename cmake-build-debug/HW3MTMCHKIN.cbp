@@ -90,10 +90,19 @@
 		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/HealthPoints.h">
 			<Option target="HW3MTMCHKIN"/>
 		</Unit>
+		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/HealthPointsExampleTest.cpp">
+			<Option target="HW3MTMCHKIN"/>
+		</Unit>
 		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/Queue.h">
 			<Option target="HW3MTMCHKIN"/>
 		</Unit>
-		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/main.cpp">
+		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/QueueExampleTests.cpp">
+			<Option target="HW3MTMCHKIN"/>
+		</Unit>
+		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/TestMain.cpp">
+			<Option target="HW3MTMCHKIN"/>
+		</Unit>
+		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/TestUtils.h">
 			<Option target="HW3MTMCHKIN"/>
 		</Unit>
 		<Unit filename="C:/Users/Ali Harbaji/Documents/GitHub/HW3MTMCHKIN/CMakeLists.txt">

@@ -68,11 +68,56 @@ include CMakeFiles/HW3MTMCHKIN.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/HW3MTMCHKIN.dir/flags.make
 
+CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/flags.make
+CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/includes_CXX.rsp
+CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj: ../HealthPointsExampleTest.cpp
+CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj -MF CMakeFiles\HW3MTMCHKIN.dir\HealthPointsExampleTest.cpp.obj.d -o CMakeFiles\HW3MTMCHKIN.dir\HealthPointsExampleTest.cpp.obj -c "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\HealthPointsExampleTest.cpp"
+
+CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\HealthPointsExampleTest.cpp" > CMakeFiles\HW3MTMCHKIN.dir\HealthPointsExampleTest.cpp.i
+
+CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\HealthPointsExampleTest.cpp" -o CMakeFiles\HW3MTMCHKIN.dir\HealthPointsExampleTest.cpp.s
+
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/flags.make
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/includes_CXX.rsp
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj: ../QueueExampleTests.cpp
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj -MF CMakeFiles\HW3MTMCHKIN.dir\QueueExampleTests.cpp.obj.d -o CMakeFiles\HW3MTMCHKIN.dir\QueueExampleTests.cpp.obj -c "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\QueueExampleTests.cpp"
+
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\QueueExampleTests.cpp" > CMakeFiles\HW3MTMCHKIN.dir\QueueExampleTests.cpp.i
+
+CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\QueueExampleTests.cpp" -o CMakeFiles\HW3MTMCHKIN.dir\QueueExampleTests.cpp.s
+
+CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/flags.make
+CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/includes_CXX.rsp
+CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj: ../TestMain.cpp
+CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj -MF CMakeFiles\HW3MTMCHKIN.dir\TestMain.cpp.obj.d -o CMakeFiles\HW3MTMCHKIN.dir\TestMain.cpp.obj -c "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\TestMain.cpp"
+
+CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\TestMain.cpp" > CMakeFiles\HW3MTMCHKIN.dir\TestMain.cpp.i
+
+CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\TestMain.cpp" -o CMakeFiles\HW3MTMCHKIN.dir\TestMain.cpp.s
+
 CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/flags.make
 CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/includes_CXX.rsp
 CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj: ../HealthPoints.cpp
 CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj -MF CMakeFiles\HW3MTMCHKIN.dir\HealthPoints.cpp.obj.d -o CMakeFiles\HW3MTMCHKIN.dir\HealthPoints.cpp.obj -c "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\HealthPoints.cpp"
 
 CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.i: cmake_force
@@ -83,36 +128,25 @@ CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\HealthPoints.cpp" -o CMakeFiles\HW3MTMCHKIN.dir\HealthPoints.cpp.s
 
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/flags.make
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/includes_CXX.rsp
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj: CMakeFiles/HW3MTMCHKIN.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj -MF CMakeFiles\HW3MTMCHKIN.dir\main.cpp.obj.d -o CMakeFiles\HW3MTMCHKIN.dir\main.cpp.obj -c "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\main.cpp"
-
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HW3MTMCHKIN.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\main.cpp" > CMakeFiles\HW3MTMCHKIN.dir\main.cpp.i
-
-CMakeFiles/HW3MTMCHKIN.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HW3MTMCHKIN.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\main.cpp" -o CMakeFiles\HW3MTMCHKIN.dir\main.cpp.s
-
 # Object files for target HW3MTMCHKIN
 HW3MTMCHKIN_OBJECTS = \
-"CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj" \
-"CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj"
+"CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj" \
+"CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj" \
+"CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj" \
+"CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj"
 
 # External object files for target HW3MTMCHKIN
 HW3MTMCHKIN_EXTERNAL_OBJECTS =
 
+HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/HealthPointsExampleTest.cpp.obj
+HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/QueueExampleTests.cpp.obj
+HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/TestMain.cpp.obj
 HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/HealthPoints.cpp.obj
-HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/main.cpp.obj
 HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/build.make
 HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/linklibs.rsp
 HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/objects1.rsp
 HW3MTMCHKIN.exe: CMakeFiles/HW3MTMCHKIN.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable HW3MTMCHKIN.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Ali Harbaji\Documents\GitHub\HW3MTMCHKIN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable HW3MTMCHKIN.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\HW3MTMCHKIN.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
