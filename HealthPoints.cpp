@@ -11,8 +11,9 @@ HealthPoints::HealthPoints(int max_HP) {
 HealthPoints& HealthPoints::operator-=(int healthPoints) {
     if(HP - healthPoints < 0){
         HP = 0;
-    }
-    else{
+    } else if (HP - healthPoints > maxHP){
+        HP = maxHP;
+    } else{
         HP -= healthPoints;
     }
     return *this;
@@ -22,6 +23,8 @@ HealthPoints& HealthPoints::operator-=(int healthPoints) {
 HealthPoints& HealthPoints::operator+=(int healthPoints) {
     if (HP + healthPoints > maxHP) {
         HP = maxHP;
+    } else if (HP + healthPoints < 0) {
+        HP = 0;
     } else {
         HP += healthPoints;
     }
@@ -46,6 +49,8 @@ HealthPoints operator-(const HealthPoints &healthPoints, int healthPointsToSub) 
     result -= healthPointsToSub;
     return result;
 }
+
+
 
 bool operator==(const HealthPoints &healthPoints1, const HealthPoints &healthPoints2){
     return healthPoints1.HP == healthPoints2.HP;
@@ -76,12 +81,15 @@ std::ostream& operator<<(std::ostream& stream, const HealthPoints &healthPoints)
     return stream;
 }
 
-HealthPoints &HealthPoints::operator=(int healthPoints) {
-    HealthPoints result = HealthPoints(healthPoints);
-    HP = result.HP;
-    maxHP = result.maxHP;
+HealthPoints &HealthPoints::operator=(const HealthPoints &healthPoints) {
+    HP = healthPoints.HP;
+    maxHP = healthPoints.maxHP;
     return *this;
 }
+
+
+
+
 
 
 

@@ -182,7 +182,7 @@ public:
         return *this;
     }
 
-    Iterator operator++(int){
+    Iterator& operator++(int){
         // handle exception
         if(node == nullptr){
             throw InvalidOperation(); // nullptr dereference
