@@ -39,6 +39,24 @@ public:
 
         }
     }
+    // assignment operator deep copy
+    Queue& operator=(Queue const &queue){
+        if (this != &queue){
+            Node* t_ptr = queue.head;
+            while(t_ptr != nullptr){
+                try {
+                    pushBack(t_ptr->data);
+                    t_ptr = t_ptr->next;
+                }catch (std::bad_alloc& e){
+                    // rethrow error
+                    throw e;
+                }
+            }
+        }
+        return *this;
+    }
+
+
 
     class EmptyQueue : public std::exception {};
 
@@ -73,7 +91,7 @@ public:
         return currSize;
     }
 
-
+    // does not create a deep copy
     template <class Condition>
     friend Queue<T> filter(const Queue& queue, Condition condition){
         Queue<T> newQueue;
@@ -134,6 +152,7 @@ void Queue<T>::pushBack(T element) {
         } else {
             tail->next = newNode;
             tail = newNode;
+            tail->next = nullptr;
         }
         currSize++;
     }catch (std::bad_alloc& e){
