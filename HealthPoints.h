@@ -32,9 +32,10 @@ public:
 
     friend std::ostream& operator<<(std::ostream& stream, const HealthPoints& healthPoints);
 
-protected:
 
 
+
+private:
     int HP; // move later to private
     int maxHP;
 };

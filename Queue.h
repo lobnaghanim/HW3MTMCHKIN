@@ -21,6 +21,8 @@ public:
             delete t_ptr;
             t_ptr = t_ptr2;
         }
+        head = nullptr;
+        tail = nullptr;
     }
 
     // copy constructor
