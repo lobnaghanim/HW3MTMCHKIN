@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-#include "HealthPoints.h"
+
+
 #include "Queue.h"
 #include <vector>
 // include REQUIRE
@@ -14,7 +15,7 @@ bool isEven(int n){
 }
 static void setFourtyTwo(int& n)
 {
-    n = 42;
+    n = 69;
 }
 static void addOne(int& n)
 {
@@ -41,25 +42,79 @@ int main(){
     queue1.pushBack(3);
     queue1.pushBack(4);
 
-
-    Queue<int> queue2(queue1);
-
-    queue1.pushBack(5);
-    queue1.pushBack(6);
-    queue1.pushBack(7);
-
-    REQUIRE(queue1.front() == 1);
-    // print front of queue1
-    queue1.popFront();
-
-
-    Queue<int> queue3 = filter(queue1, isEven);
+    cout << "queue1: ";
     printQueue(queue1);
-    queue1.front() = 42;
-    cout << "queue 1 after pop" << endl;
-    printQueue(queue1);
+
+    Queue<int> queue2;
+    queue2.pushBack(42);
+    queue2.pushBack(33);
+
+    cout << "queue2: ";
     printQueue(queue2);
+
+    queue2 = queue1;
+    cout << "queue2: ";
+    printQueue(queue2);
+
+    cout << "*********queue2: ";
+    printQueue(queue2);
+
+
+    Queue<int> queue3(queue1);
+    cout << "queue3: ";
+    queue3.pushBack(33333);
     printQueue(queue3);
+
+
+    Queue<int> queue4 = queue1;
+    cout << "queue4: ";
+    queue4.pushBack(44444);
+    printQueue(queue4);
+
+    cout << "-------------------" << endl;
+    // print q1
+    cout << "queue1: ";
+    printQueue(queue1);
+    // print q2
+    cout << "queue2: ";
+    printQueue(queue2);
+    // print q3
+    cout << "queue3: ";
+    printQueue(queue3);
+    // print q4
+    cout << "queue4: ";
+    printQueue(queue4);
+
+    Queue<int> queue5;
+    queue5.pushBack(1);
+
+    queue5 = queue1;
+    cout << "queue5: ";
+    printQueue(queue5);
+
+    Queue<int> temp;
+
+    temp = filter(queue1, isEven);
+    temp = filter(queue2, isEven);
+    temp = filter(queue3, isEven);
+    temp = filter(queue4, isEven);
+    temp = filter(queue5, isEven);
+    temp.pushBack(1);
+
+    transform(queue1, setFourtyTwo);
+
+    // print q1
+    cout << "queue1: ";
+    printQueue(queue1);
+
+    Queue<int> qErr;
+    qErr.pushBack(1);
+    qErr.pushBack(2);
+    try{
+        queue2 = queue1;
+    }catch (std::bad_alloc& e){
+        cout << "bad_alloc caught: " << e.what() << endl;
+    }
 
     return 0;
 }

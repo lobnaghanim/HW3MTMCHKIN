@@ -2,6 +2,13 @@
 #define QUEUE_H
 #include <iostream>
 
+// swap utility function
+template <typename T>
+void swapPtr(T& a, T& b){
+    T temp = a;
+    a = b;
+    b = temp;
+}
 
 template <typename T> class Queue {
 
@@ -59,6 +66,7 @@ public:
 // assignment operator deep copy and swap (passes all tests but with a memory leak)
     Queue& operator=(Queue const& queue) {
         if (this != &queue) {
+            int size = 0;
             // Create a temporary Queue for the deep copy
             Queue tempQueue;
             // Perform the deep copy into the temporary Queue
@@ -66,21 +74,25 @@ public:
             while (t_ptr != nullptr) {
                 try {
                     tempQueue.pushBack(t_ptr->m_data);
+                    size++;
                     t_ptr = t_ptr->m_next;
                 } catch (std::bad_alloc& e) {
-
+//                    for(int i = 0; i < size; i++){
+//                        tempQueue.popFront();
+//                    }
+//                    tempQueue.m_head = nullptr;
                     // Rethrow error or handle as needed
                     throw e;
                 }
             }
             // Deep copy succeeded, update the current object
             // by swapping its contents with the temporary Queue
-            std::swap(m_head, tempQueue.m_head);
-            std::swap(m_tail, tempQueue.m_tail);
+            swapPtr(m_head, tempQueue.m_head);
+            swapPtr(m_tail, tempQueue.m_tail);
             n_currSize = tempQueue.n_currSize;
         }
         return *this;
-    }
+}
 
 
 
